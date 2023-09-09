@@ -1,0 +1,33 @@
+---
+title: Usage
+description: A guide in my new Starlight docs site.
+---
+
+To use the component, first import it into your file:
+
+```svelte
+import Marquee from "react-fast-marquee";
+```
+
+Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
+
+```svelte
+<Marquee>
+  I can be a Svelte component, multiple Svelte components, or just some text.
+</Marquee>
+```
+
+A sample file might look like this:
+
+```svelte
+<script>
+    import MyComponent from '../components/MyComponent';
+    import Marquee from 'svelte-fast-marquee';
+</script>
+
+<Marquee>
+    <MyComponent />
+    <MyComponent />
+    <MyComponent />
+</Marquee>
+```
