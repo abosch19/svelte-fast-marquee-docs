@@ -9,18 +9,18 @@ const { title, description, defaultProp, type, required } = Astro.props;
 	<p class="description">
 		{description}
 	</p>
-	<div class="x">
+	<div class="flex">
 		<div>
-			<b class="">Type</b>
+			<b>Type</b>
 			<p>{type}</p>
 		</div>
 		<div>
-			<b class="">Default</b>
+			<b>Default</b>
 			<p>{defaultProp}</p>
 		</div>
 		<div>
-			<b class="">Required</b>
-			<p>{required ? 'Required' : 'Optional'}</p>
+			<b>Required</b>
+			<p>{required ? 'Yes' : 'No'}</p>
 		</div>
 	</div>
 </div>
@@ -36,11 +36,15 @@ const { title, description, defaultProp, type, required } = Astro.props;
 		margin-top: 0rem;
 	}
 
-	.x {
+	.flex {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
+
+		& > div {
+			margin-top: 0 !important;
+		}
 	}
 
 	b, p {
