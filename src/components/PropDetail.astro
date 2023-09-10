@@ -1,0 +1,49 @@
+---
+const { title, description, defaultProp, type, required } = Astro.props;
+---
+
+<div class="container">
+	<p class="title">
+		{title}
+	</p>
+	<p class="description">
+		{description}
+	</p>
+	<div class="x">
+		<div>
+			<b class="">Type</b>
+			<p>{type}</p>
+		</div>
+		<div>
+			<b class="">Default</b>
+			<p>{defaultProp}</p>
+		</div>
+		<div>
+			<b class="">Required</b>
+			<p>{required ? 'Required' : 'Optional'}</p>
+		</div>
+	</div>
+</div>
+
+<style>
+	.title {
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin-bottom: 0rem;
+	}
+
+	.description {
+		margin-top: 0rem;
+	}
+
+	.x {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	b, p {
+		margin-top: 0.2rem !important;
+	}
+</style>

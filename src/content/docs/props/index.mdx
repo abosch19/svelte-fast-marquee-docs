@@ -1,16 +1,19 @@
 ---
-title: FAST - Props
+title: Props
 description: A guide in my new Starlight docs site.
 ---
 import { ViewTransitions } from 'astro:transitions';
+import PropDetail from '../../../components/PropDetail.astro';
 
 <ViewTransitions />
 
-| Property        | Type                        | Default           | Description                                              |
-| :-------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
-| `class`         | `string`                    | ""              	| The name of the css class to style the container div.    |
-| `play`          | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
-| `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
-| `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
-| `direction`     | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
-| `gradient`      | `boolean`                   | `false`           | Whether to show a gradient on right and left             |
+<PropDetail title="style" description="The inline style for the container div." type="string" defaultProp='""' />
+<PropDetail title="class" description="The name of the css class to style the container div." type="string" defaultProp='""' />
+<PropDetail title="play" description="Whether to play or pause the marquee." type="boolean" defaultProp="true" />
+<PropDetail title="pauseOnHover" description="Whether to pause the marquee when hovered." type="boolean" defaultProp="false" />
+<PropDetail title="pauseOnClick" description="Whether to pause the marquee when clicked." type="boolean" defaultProp="false" />
+<PropDetail title="direction" description="The direction the marquee is sliding." type='"left" or "right"' defaultProp='"left"' />
+<PropDetail title="gradient" description="Whether to show a gradient on right and left." type="boolean" defaultProp="false" />
+<PropDetail title="--gradientWidth" description="" type="string" defaultProp="10%" />
+<PropDetail title="--gradientColor" description="Whether to show a gradient on right and left." type="string" defaultProp="white" />
+
